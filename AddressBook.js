@@ -140,3 +140,13 @@ function editEntries(addressBookList){
     });
     console.log(addressBookList.toString());
 }
+function deleteEntries(addressBookList){
+    const name = readline.question("Enter Name you want To Delete: ")
+    addressBookList.forEach(element =>{
+        if (element.firstName===name){
+            addressBookList.pop(element);
+            console.log("Data SuccessFully Deleted");
+        }
+    });
+    console.log(addressBookList.toString());
+}
